@@ -9,12 +9,14 @@ cache:
 
 script:
   - npm run build
+
 before-deploy:
   - >
     if ! [ "$BEFORE_DEPLOY_RUN" ]; then
       export BEFORE_DEPLOY_RUN=1;
-      npm run deploy-storybook -- --out=site
+      npm run deploy-storybook -o=site
     fi
+
 deploy:
   - provider: pages
     edge: false
