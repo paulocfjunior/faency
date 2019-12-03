@@ -1,0 +1,26 @@
+language: node_js
+
+node_js:
+  - "stable"
+
+cache:
+  directories:
+    - node_modules
+
+script:
+  - npm run build
+
+deploy:
+   - provider: script
+    script: npm run deploy-storybook
+    skip_cleanup: true
+    on:
+      repo: containous/traefik
+      tags: true
+  - provider: npm
+    email: ${NPM_EMAIL}
+    api_key: ${NPM_API_TOKEN}
+    skip_cleanup: true
+    on:
+      repo: containous/faency
+      tags: true
