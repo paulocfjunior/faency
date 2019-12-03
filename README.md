@@ -1,6 +1,6 @@
 # [Faency](https://containous.github.io/faency/)
 
-Faency is a React component library
+Faency is the [Containous](https://containo.us/) React component library
 
 ### Installation
 
@@ -18,14 +18,20 @@ yarn add @containous/faency
 
 ### Usage
 
-1.  Import components from the lib and start using them:
+Import components from the lib and start using them:
 
 ```js
+  import React from 'react';
   import { Button } from '@containous/faency';
 
-  const YourApp = () => (
+  const Component = () => (
     <>
       <Button variant="primary">Click me</Button>
     </>
-  )
+  );
 ```
+
+## Development
+
+
+We use Storybook to create a simple, hot-reloading playground for development on these components. You can edit/create a `*.story.tsx` file to preview and document usage of a component.
