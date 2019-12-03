@@ -12,7 +12,7 @@ script:
 
 deploy:
    - provider: script
-    script: npm run deploy-storybook
+    script: npm run deploy-storybook -- --ci --host-token-env-variable=${GITHUB_TOKEN}
     skip_cleanup: true
     on:
       repo: containous/traefik
