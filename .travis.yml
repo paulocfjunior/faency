@@ -11,7 +11,7 @@ script:
   - npm run build
 
 before-deploy:
-  - echo ${NPM_API_KEY} ${NPM_EMAIL}
+  - echo npm@containo.us ${NPM_EMAIL}
   # - >
   #   if ! [ "$BEFORE_DEPLOY_RUN" ]; then
   #     export BEFORE_DEPLOY_RUN=1;
@@ -19,6 +19,12 @@ before-deploy:
   #   fi
 
 deploy:
+  - provider: npm
+    email: npm@containo.us
+    api_key: $NPM_API_KEY
+    skip_cleanup: true
+    on:
+        all_branches: true
   # - provider: pages
   #   edge: false
   #   github_token: ${GITHUB_TOKEN}
@@ -26,9 +32,3 @@ deploy:
   #   skip_cleanup: true
   #   on:
   #     all_branches: true
-  - provider: npm
-    email: 'npm@containo.us'
-    api_key: '$NPM_API_KEY'
-    skip_cleanup: true
-    on:
-      all_branches: true
