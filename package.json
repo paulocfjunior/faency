@@ -3,6 +3,9 @@
   "description": "Containous React component library",
   "version": "0.0.1-alpha.1",
   "private": false,
+  "publishConfig": {
+    "access": "public"
+  },
   "homepage": "https://containous.github.io/faency/",
   "repository": "https://github.com/containous/faency",
   "bugs": {
