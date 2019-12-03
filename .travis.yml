@@ -24,12 +24,10 @@ deploy:
     local_dir: site
     skip_cleanup: true
     on:
-      repo: containous/faency
       all_branches: true
   - provider: npm
     email: ${NPM_EMAIL}
     api_key: ${NPM_API_TOKEN}
     skip_cleanup: true
     on:
-      repo: containous/faency
-      tags: true
+      all_branches: true
