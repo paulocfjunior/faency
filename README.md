@@ -1,5 +1,7 @@
 # [Faency](https://containous.github.io/faency/)
 
+[![Build Status](https://travis-ci.com/containous/faency.svg?branch=master)](https://travis-ci.com/containous/faency)
+
 Faency is the [Containous](https://containo.us/) React component library
 
 ### Installation
