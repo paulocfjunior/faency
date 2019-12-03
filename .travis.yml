@@ -24,7 +24,8 @@ deploy:
     api_key: $NPM_API_KEY
     skip_cleanup: true
     on:
-        all_branches: true
+      tags: true
+      all_branches: true
   # - provider: pages
   #   edge: false
   #   github_token: ${GITHUB_TOKEN}
