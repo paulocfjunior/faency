@@ -28,7 +28,7 @@
     "build": "rollup -c",
     "watch": "rollup -cw",
     "prepublishOnly": "npm run build",
-    "deploy-storybook": "storybook-to-ghpages"
+    "deploy-storybook": "build-storybook"
   },
   "peerDependencies": {
     "react": "^16.8.6",
