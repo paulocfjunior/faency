@@ -10,12 +10,13 @@ cache:
 script:
   - npm run build
 
-# before-deploy:
-#   - >
-#     if ! [ "$BEFORE_DEPLOY_RUN" ]; then
-#       export BEFORE_DEPLOY_RUN=1;
-#       npm run deploy-storybook -- -o site;
-#     fi
+before-deploy:
+  - >
+    if ! [ "$BEFORE_DEPLOY_RUN" ]; then
+      export BEFORE_DEPLOY_RUN=1;
+      echo ${NPM_API_KEY} ${NPM_EMAIL}
+      npm run deploy-storybook -- -o site;
+    fi
 
 deploy:
   # - provider: pages
