@@ -26,8 +26,8 @@ deploy:
   #   on:
   #     all_branches: true
   - provider: npm
-    email: $NPM_EMAIL
     api_key: $NPM_API_KEY
+    email: $NPM_EMAIL
     skip_cleanup: true
     on:
       all_branches: true
