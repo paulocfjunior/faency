@@ -9,7 +9,7 @@
     "url": "https://github.com/containous/faency/issues"
   },
   "description": "A website for Faency Design System",
-  "version": "0.6.0",
+  "version": "0.7.0",
   "scripts": {
     "build": "gatsby build",
     "deploy": "gatsby build --prefix-paths && gh-pages -d public -r https://$GITHUB_TOKEN@github.com/containous/faency.git",
